@@ -1,0 +1,27 @@
+<body>
+	<div>
+		<h1>
+			Tableau des séjours
+		</h1>
+
+		<table class=" table table-striped">
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>Nom</th>
+					<th>Image</th>
+					<th>Prix</th>
+				</tr>
+			</thead>	
+			<tbody>
+				<tr *ngFor='let obj of listeSejours' [ngClass]='{"green": obj.prix<1000}'>
+				<td>{{obj.id}}</td>
+				<td>{{obj.nom}}</td>
+				<td>{{obj.urlImage}}</td>
+				<td>{{obj.prix}}</td>
+				</tr>
+			</tbody>
+
+		</table>
+	</div>
+</body>
